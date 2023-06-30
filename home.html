@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width, initial-scale=1.0">
+       <title>Resso</title>
+       <style>
+          body {
+         	padding: 0;
+	        margin: 0;
+          } 
+          .glitch-container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: url(rrrr.jpg);
+            background-size: 100%;
+          }
+          .glitch-container:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(rrrr.jpg);
+            background-size: 100%;
+            opacity: 0.5;
+            mix-blend-mode: hard-light;
+            animation: animate .5s linear infinite;
+          }
+          @keyframes animate{
+            0%{
+                background-position: 0 0;
+                filter: hue-rotate(odeg);
+            }
+            10%{
+                background-position: 5px 0;
+            }
+            20%{
+                background-position: -5px 0;
+            }
+            30%{
+                background-position: 15px 0;
+            }
+            40%{
+                background-position: 5px 0;
+            }
+            50%{
+                background-position: -25px 0;
+            }
+            60%{
+                background-position: -50px 0;
+            }
+            70%{
+                background-position: 0 -20px;
+            }
+            80%{
+                background-position: -60px -20px;
+            }
+            81%{
+                background-position: 0 0;
+            }
+            100%{
+               background-position: 0 0;
+               filter: hue-rotate(360deg);
+            }
+          }
+                    
+          .main-btn {
+            position: absolute;
+            top: 70%;
+            left: 30%;
+            background-color: transparent;
+            box-shadow: 0 6px 6px rgba(0,0,0,0.9);
+            cursor: pointer;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 30px;
+            margin: 20px 100px;
+            padding: 20px 100px;
+            transition: all 0.5s;
+            border-color:lightgoldenrodyellow ;
+          }
+          .main-btn a{
+            color:lightgoldenrodyellow;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          .main-btn a::after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          .main-btn:hover a{
+            padding-right: 25px;
+          }
+          .main-btn:hover a::after{
+            opacity: 1;
+            right: 0;
+          }
+          .glitch-container h1{
+            color: white;
+            text-shadow: 0 0 3px , 0 0 5px #0000ff;
+            font-size: 50px;
+            margin-left: 300px;
+            margin-top: 100px;
+          }
+        </style>
+    </head>
+    <body>
+       <div class="glitch-container">
+         <h1>Welcome To My Music Website!........</h1>
+         <div class="glitch-img"></div>
+         <button class="main-btn"> 
+           <a href="index1.html">Let's Go</a>
+         </button>  
+       </div>
+    
+    </body>
+</html>
